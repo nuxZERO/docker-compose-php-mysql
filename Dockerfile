@@ -5,4 +5,4 @@ RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install gd bcmath opcache curl fileinfo hash iconv json mbstring pdo pdo_sqlite pdo_mysql pdo_pgsql phar session sockets simplexml xml xmlrpc zip
 
- VOLUME /var/www/html
+VOLUME /var/www/html
