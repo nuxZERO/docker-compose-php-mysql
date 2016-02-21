@@ -2,14 +2,14 @@
 
 $user = 'docker';
 $pass = 'docker';
-$ip_address_of_docker_vm = '';
 
 try {
-  $dbh = new PDO("mysql:host=$ip_address_of_docker_vm;dbname=docker", $user, $pass);
-  print "Successfully connect to database<br>";
-  $dbh = null;
+    // DB hostname should be the same in docker-compose.yml
+    $dbh = new PDO("mysql:host=db;port=3306;dbname=docker", $user, $pass);
+    print "Successfully connect to database<br>";
+    $dbh = null;
 } catch (PDOException $e) {
-  print "Error!: " . $e->getMessage() . "<br>";
+    print "Error!: " . $e->getMessage() . "<br>";
 }
 
 print "<br>";
