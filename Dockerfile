@@ -19,3 +19,5 @@ RUN buildDeps=" \
     && a2enmod rewrite
 
 VOLUME /var/www/html
+
+EXPOSE 80 443
